@@ -3,7 +3,6 @@ class Main {
   public static void main(String[] args) {
     /*Antes de compilar, Chame o metodo do exercicio
      que sera analisado ;) */
-     Ex5PrimeirosN();
   }
   public static void Ex1NumerosPares(){
     Scanner sc1 = new Scanner(System.in);
