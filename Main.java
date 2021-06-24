@@ -3,6 +3,7 @@ class Main {
   public static void main(String[] args) {
     /*Antes de compilar, Chame o metodo do exercicio
      que sera analisado ;) */
+     Ex5PrimeirosN();
   }
   public static void Ex1NumerosPares(){
     Scanner sc1 = new Scanner(System.in);
@@ -55,7 +56,24 @@ if (valorCheckado <= 1){
     }
   }
   public static void Ex5PrimeirosN(){
-
+        var scanner = new Scanner(System.in);
+        int d = scanner.nextInt();
+        int m = scanner.nextInt();
+        int n = scanner.nextInt();
+        int encontrados = 0;
+        int i = 1;
+        while (encontrados < n) {
+            if (contarNumeroDeDigitos(i, d) == m) {
+                encontrados++;
+                System.out.println(i);
+            }
+            i++;
+        }
   }
+  private static long contarNumeroDeDigitos(int number, int digito) {
+        Character charDigito = Character.forDigit(digito, 10);
+        String stringNumero = String.valueOf(number);
+        return stringNumero.chars().filter(digito -> digito == charDigito).count();
+    }
 
 }
